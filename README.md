@@ -21,7 +21,7 @@ Users should be able to:
 ![](./images/stats-mobile-screenshot.png)
 ### Links
 
-- Live Site URL: 
+- Live Site URL: https://deft-lily-476d71.netlify.app
 
 ### Built with
 
