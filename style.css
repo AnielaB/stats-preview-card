@@ -1,0 +1,134 @@
+:root{
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --transparent-paragraph: hsla(0, 0%, 100%, 0.75);
+    --tranparent-stat-headings: hsla(0, 0%, 100%, 0.6);
+    --ff-inter:  'Inter', sans-serif;
+    --ff-lexend: 'Lexend Deca', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+html,
+body{
+    max-height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-inter);
+    font-size: 0.9375rem;
+    color: var(--white);
+    background-color: var(--very-dark-blue);
+    text-align: center;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  .card{
+    margin: 2rem;
+    max-width: 340px;
+    max-height: 100%;
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card__image{
+    background-image: url(./images/image-header-mobile.jpg);
+    background-color: var(--soft-violet);
+    opacity: 0.5;
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding: 120px;
+  }
+
+  .card__body{
+    padding: 2.2em 1.8em;
+  }
+
+  .body-title{
+    font-size: 1.75rem;
+    margin-bottom: 0.8em;
+  }
+
+  .body-title span{
+    color: var(--soft-violet);
+  }
+
+  .body-text{
+    color: var(--transparent-paragraph);
+    line-height: 1.7em;
+    margin-bottom: 2.5em;
+  }
+
+  .flex-group{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .stats-num{
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: 0.4em;
+  }
+
+  .stats-title{
+    text-transform: uppercase;
+    font-family: var(--ff-lexend);
+    font-weight: var(--fw-regular);
+    color: var(--tranparent-stat-headings);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+  }
+
+  /*===========
+    MEDIA QUERY 
+    ===========*/
+
+    @media (min-width: 900px){
+        body{
+           height: 100vh; 
+        }
+        .card{
+            display: flex;
+            max-width: 90vw;
+            text-align: start;
+        }
+        .card__image{
+            width: 50%;
+        }
+        .card__body{
+            width: 50%;
+            order: -1;
+            padding: 4rem 6rem 4rem 3rem;
+        }
+        .body-title{
+            font-size: 2.2rem;
+        }
+        .flex-group{
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 0;
+            margin-top: 4rem;
+        }
+        .wrapper{
+            max-width: 700px;
+        }
+    }
